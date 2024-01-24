@@ -74,10 +74,24 @@
     </ul>
     <button v-on:click="onClick">Click!</button>
 
+    <h1>Section8</h1>
+    <p><input type="text" v-model="keyword"></p>
+    <p>{{ message }}</p>
+    <ul>
+      <li v-for="item in items">
+        <a v-bind:href="item.url" target="_blank">
+          {{ item.title }}
+        </a>
+        likes: {{ item.likes_count }}
+      </li>
+    </ul>
+
     <h1>Data</h1>
     <pre>{{$data}}</pre>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
+  <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
