@@ -8,21 +8,7 @@
 </head>
 <body>
   <div id="app">
-
-    <p v-once>{{ message }}</p>
-    <button v-on:click="clickHandler">Click!</button>
-    <p v-pre>{{ message }}</p>
-    <p v-html="message"></p>
-    <p v-cloak>{{ message }}</p>
-    <h2>Mustache</h2>
-    <p>{{message}}</p>
-    <h2>v-text</h2>
-    <p v-text="message"></p>
-    <p>{{ number + 1}}</p>
-    <p>{{ message.split('').reverse().join('')}}</p>
-    <p>{{ ok ? "YES" : "NO"}}</p>
-
-
+    <h1>Sectin4</h1>
     <form v-on:submit.prevent>
       <h2>TODO List</h2>
         <input type="text" v-model="newItem">
@@ -37,6 +23,40 @@
         <button v-on:click="deleteItem(index)">Delete</button>
       </li>
     </ul>
+
+    <h1>Sectin5</h1>
+    <p v-once>{{ message }}</p>
+    <button v-on:click="clickHandler">Click!</button>
+    <p v-pre>{{ message }}</p>
+    <p v-html="message"></p>
+    <p v-cloak>{{ message }}</p>
+    <h2>Mustache</h2>
+    <p>{{message}}</p>
+    <h2>v-text</h2>
+    <p v-text="message"></p>
+    <p>{{ number + 1}}</p>
+    <p>{{ message.split('').reverse().join('')}}</p>
+    <p>{{ ok ? "YES" : "NO"}}</p>
+
+    <h1>Sectin6</h1>
+    <p>{{ reversedMessage }}</p>
+    <p>{{ reversedMessageMethod() }}</p>
+    <p>base price: <input type="text" v-model="basePrice"></p>
+    <p>tax included price: <input type="text" v-model="taxIncludedPrice"></p>
+    <h2>computed:</h2>
+    <ol>
+      <li>{{ computedNumber }}</li>
+      <li>{{ computedNumber }}</li>
+      <li>{{ computedNumber }}</li>
+    </ol>
+    <h2>methods:</h2>
+    <ol>
+      <li>{{ methodsNumber() }}</li>
+      <li>{{ methodsNumber() }}</li>
+      <li>{{ methodsNumber() }}</li>
+    </ol>
+
+    <h1>Data</h1>
     <pre>{{$data}}</pre>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
