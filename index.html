@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="app">
-    <h1>Sectin4</h1>
+    <h1>Section4</h1>
     <form v-on:submit.prevent>
       <h2>TODO List</h2>
         <input type="text" v-model="newItem">
@@ -24,7 +24,7 @@
       </li>
     </ul>
 
-    <h1>Sectin5</h1>
+    <h1>Section5</h1>
     <p v-once>{{ message }}</p>
     <button v-on:click="clickHandler">Click!</button>
     <p v-pre>{{ message }}</p>
@@ -38,7 +38,7 @@
     <p>{{ message.split('').reverse().join('')}}</p>
     <p>{{ ok ? "YES" : "NO"}}</p>
 
-    <h1>Sectin6</h1>
+    <h1>Section6</h1>
     <p>{{ reversedMessage }}</p>
     <p>{{ reversedMessageMethod() }}</p>
     <p>base price: <input type="text" v-model="basePrice"></p>
@@ -55,6 +55,24 @@
       <li>{{ methodsNumber() }}</li>
       <li>{{ methodsNumber() }}</li>
     </ol>
+
+    <h1>Section7</h1>
+    <p>{{ message7 }}</p>
+    <p><input type="text" v-model="message7"></p>
+    <p><input type="text" v-model="km">km</p>
+    <p><input type="text" v-model="m">m</p>
+    <p>firstName: <input type="text" v-model="firstName"></p>
+    <p>lastName: <input type="text" v-model="lastName"></p>
+    <h2>watch:</h2>
+    <p>fullName: {{ fullName }}</p>
+    <h2>computed:</h2>
+    <p>fullName: {{ fullNameComputed }}</p>
+    <ul>
+      <li v-for="color in colors">
+        {{ color.name }}
+      </li>
+    </ul>
+    <button v-on:click="onClick">Click!</button>
 
     <h1>Data</h1>
     <pre>{{$data}}</pre>
