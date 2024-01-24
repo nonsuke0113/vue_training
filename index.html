@@ -8,6 +8,21 @@
 </head>
 <body>
   <div id="app">
+
+    <p v-once>{{ message }}</p>
+    <button v-on:click="clickHandler">Click!</button>
+    <p v-pre>{{ message }}</p>
+    <p v-html="message"></p>
+    <p v-cloak>{{ message }}</p>
+    <h2>Mustache</h2>
+    <p>{{message}}</p>
+    <h2>v-text</h2>
+    <p v-text="message"></p>
+    <p>{{ number + 1}}</p>
+    <p>{{ message.split('').reverse().join('')}}</p>
+    <p>{{ ok ? "YES" : "NO"}}</p>
+
+
     <form v-on:submit.prevent>
       <h2>TODO List</h2>
         <input type="text" v-model="newItem">

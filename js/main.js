@@ -1,9 +1,15 @@
 const app = Vue.createApp({
   data: () => ({
+    message: 'Hello <span style="color:red">Vue.js!</span>',
+    number: 100,
+    ok: true,
     newItem: '',
     todos: []
   }),
   methods: {
+    clickHandler: function() {
+      this.message = this.message.split('').reverse().join('')
+    },
     addItem: function() {
       console.log("Clicked!")
       if(this.newItem === '') return
