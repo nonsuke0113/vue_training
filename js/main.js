@@ -1,3 +1,19 @@
+const helloComponent = {
+  template: '<p>Hello!</p>'
+}
+
+const buttonCounter = {
+  template: '<div><span>count: </span><button v-on:click="countUp13">{{ count13 }}</button></div>',
+  data: () => ({
+    count13: 0
+  }),
+  methods: {
+    countUp13: function(event) {
+      this.count13++
+    }
+  }
+}
+
 const app = Vue.createApp({
   data: () => ({
     basePrice: 100,
@@ -170,6 +186,17 @@ const app = Vue.createApp({
       console.log(index)
       this.todos.splice(index, 1)
     }
+  },
+  components: {
+    'hello-component': helloComponent,
+    'button-counter': buttonCounter
   }
 })
+
+// app.component('hello-component', {
+//   template: '<p>Hello!</p>'
+// })
+
+
+
 app.mount('#app')
