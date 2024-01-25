@@ -44,7 +44,14 @@ const app = Vue.createApp({
     },
     toggle: true,
     counter: 0,
-    message11: ''
+    message11: '',
+    message12: 'Hellow Vue.js!',
+    checked: false,
+    colors12: [],
+    color12: '',
+    selected: [],
+    message12_2: '',
+    age: 0
   }),
   watch: {
     keyword: function(newKeyword, oldKeyword) {

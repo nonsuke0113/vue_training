@@ -112,6 +112,39 @@
     <button v-on:click.once="clickHandler11_2">Now</button>
     <button @click.once="clickHandler11_2">Now</button>
 
+    <h1>Section12</h1>
+    <p>{{ message12 }}</p>
+    <input type="text" v-model="message12" value="hogehoge">
+    <p>{{ message12 }}</p>
+    <textarea v-model="message12"></textarea><br/>
+    <label for="checkbox">{{ checked }}</label>
+    <input type="checkbox" name="" id="checkbox" v-model="checked"><br/>
+    <label for="Red">Red</label>
+    <input type="checkbox" name="" id="red" value="Red" v-model="colors12">
+    <label for="Green">Green</label>
+    <input type="checkbox" name="" id="green" value="Green" v-model="colors12">
+    <label for="Blue">Blue</label>
+    <input type="checkbox" name="" id="blue" value="Blue" v-model="colors12">
+    <p>{{ colors12 }}</p>
+    <input type="radio" name="" id="red" value="Red" v-model="color12">
+    <label for="red">Red</label>
+    <input type="radio" name="" id="green" value="Green" v-model="color12">
+    <label for="green">Green</label>
+    <input type="radio" name="" id="blue" value="Blue" v-model="color12">
+    <label for="blue">Blue</label>
+    <p>{{ color12 }}</p>
+    <select multiple v-model="selected">
+      <option>Red</option>
+      <option>Green</option>
+      <option>Blue</option>
+    </select>
+    <p>{{ selected }}</p>
+    <input type="text" v-model.lazy="message12_2">
+    <input type="text" v-model.trim="message12_2">
+    <p>{{ message12_2 }}</p>
+    <input type="number" v-model.number="age">
+    <p>{{ age + 10 }}</p>
+
     <h1>Data</h1>
     <pre>{{$data}}</pre>
   </div>
