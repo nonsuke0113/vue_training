@@ -67,7 +67,8 @@ const app = Vue.createApp({
     color12: '',
     selected: [],
     message12_2: '',
-    age: 0
+    age: 0,
+    show: true
   }),
   watch: {
     keyword: function(newKeyword, oldKeyword) {

@@ -152,6 +152,12 @@
     <button-counter></button-counter>
     <button-counter></button-counter>
 
+    <h1>Section14</h1>
+    <button v-on:click="show = !show">Change</button>
+    <transition name="fade">
+      <p v-show="show">Hello Transition</p>
+    </transition>
+
     <h1>Data</h1>
     <pre>{{$data}}</pre>
   </div>
