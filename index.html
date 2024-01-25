@@ -104,6 +104,14 @@
     <p v-else>Not red / yellow / blue</p>
     <p v-show="toggle">Hello! Vue.js</p>
 
+    <h1>Section11</h1>
+    <p>{{ counter }}</p>
+    <button v-on:click="counter++">Click!</button>
+    <button v-on:click="clickHandler11($event, 'Vue.js')">Click!</button>
+    <p>{{ message11 }}</p>
+    <button v-on:click.once="clickHandler11_2">Now</button>
+    <button @click.once="clickHandler11_2">Now</button>
+
     <h1>Data</h1>
     <pre>{{$data}}</pre>
   </div>

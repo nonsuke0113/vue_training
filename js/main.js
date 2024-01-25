@@ -42,7 +42,9 @@ const app = Vue.createApp({
       color: 'blue',
       fontSize: '48px'
     },
-    toggle: true
+    toggle: true,
+    counter: 0,
+    message11: ''
   }),
   watch: {
     keyword: function(newKeyword, oldKeyword) {
@@ -101,6 +103,15 @@ const app = Vue.createApp({
     }
   },
   methods: {
+    clickHandler11_2: function($event, message) {
+      this.message11 = new Date().toLocaleTimeString()
+    },
+    clickHandler11: function($event, message) {
+      console.log(message)
+      console.log($event)
+      this.message = message
+      this.counter++
+    },
     getAnswer: function() {
       if(this.keyword === '') {
         console.log('karamoji')
