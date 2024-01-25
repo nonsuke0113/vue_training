@@ -86,6 +86,24 @@
       </li>
     </ul>
 
+    <h1>Section9</h1>
+    <p>Hello <span class="bg-gray text-blue" v-bind:class="{ large: isLarge, 'text-danger': hasError}">Vue.js!</span></p>
+    <p>Hello! <span v-bind:class="largeClass">Vue.js!</span></p>
+    <p>Hello! <span v-bind:class="[largeClass, dangerClass]">Vue.js!</span></p>
+    <p>Hello! <span v-bind:class="classObject">Vue.js!</span></p>
+    <p>Hello! <span v-bind:class="isLarge ? largeClass: dangerClass">Vue.js!</span></p>
+    <p>Hello! <span v-bind:style="{ color: color, fontSize: fontSize + 'px' }">Vue.js!</span></p>
+    <p>Hello! <span v-bind:style="styleObject">Vue.js!</span></p>
+
+    <h1>Section10</h1>
+    <p v-if="toggle">YES</p>
+    <p v-else>NO</p>
+    <p v-if="color === 'red'">Stop</p>
+    <p v-else-if="color === 'yellow'">Caution</p>
+    <p v-else-if="color === 'blue'">Go</p>
+    <p v-else>Not red / yellow / blue</p>
+    <p v-show="toggle">Hello! Vue.js</p>
+
     <h1>Data</h1>
     <pre>{{$data}}</pre>
   </div>

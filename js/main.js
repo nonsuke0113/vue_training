@@ -19,7 +19,30 @@ const app = Vue.createApp({
     number: 100,
     ok: true,
     newItem: '',
-    todos: []
+    todos: [],
+    isLarge: true,
+    hasError: true,
+    // largeClass: 'large',
+    largeClass: {
+      'large': true,
+      'bg-gray': true
+    },
+    // dangerClass: 'text-danger',
+    dangerClass: {
+      'text-danger': true
+    },
+    isLarge: false,
+    classObject: {
+      large: true,
+      'text-danger': true
+    },
+    color: 'bluea',
+    fontSize: 36,
+    styleObject: {
+      color: 'blue',
+      fontSize: '48px'
+    },
+    toggle: true
   }),
   watch: {
     keyword: function(newKeyword, oldKeyword) {
